@@ -3,7 +3,7 @@ import "./../styles/Hero.css";
 
 const Hero = () => {
   return (
-    <div className="hero">
+    <section className="hero">
       <div className="hero-content">
         <h1>Hi, I'm <span className="highlight">XXXXXXXX</span></h1>
         <p>
@@ -11,7 +11,7 @@ const Hero = () => {
         </p>
         <button className="hero-button">View My Work</button>
       </div>
-    </div>
+    </section>
   );
 };
 
