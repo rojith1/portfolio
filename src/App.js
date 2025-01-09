@@ -1,10 +1,13 @@
-import React from 'react';
-import AboutMe from './AboutMe'; // Import the AboutMe component
+import React from "react";
+import Header from "./components/Header";
+import Hero from "./components/Hero";
+// import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <AboutMe />
+      <Header />
+      <Hero />
     </div>
   );
 }
