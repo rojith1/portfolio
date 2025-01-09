@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
-import Hero from "./components/Hero";
+import Hero from "./components/Home";
 import About from "./components/About"; // Reusing existing component
 import Projects from "./components/Projects"; // Reusing existing component
 import Contact from "./components/Contact"; // Reusing existing component

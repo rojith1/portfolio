@@ -1,44 +1,42 @@
 import React from "react";
-import "./../styles/Projects.css";
-
-const projects = [
-  {
-    title: "Portfolio Website",
-    description: "A modern portfolio website built with React and CSS.",
-    image: "/assets/portfolio.png", // Replace with your actual images
-    link: "https://github.com/username/portfolio",
-  },
-  {
-    title: "E-Commerce App",
-    description: "An e-commerce app built with React and Firebase.",
-    image: "/assets/ecommerce.png",
-    link: "https://github.com/username/ecommerce",
-  },
-  {
-    title: "Weather App",
-    description: "A weather app using OpenWeatherMap API and React.",
-    image: "/assets/weather-app.png",
-    link: "https://github.com/username/weather-app",
-  },
-];
+import "./../styles/Projects.css";  // Ensure the CSS file is imported
 
 const Projects = () => {
   return (
-    <section id="projects" className="projects-section">
-      <h2>My Projects</h2>
-      <div className="projects-container">
-        {projects.map((project, index) => (
-          <div className="project-card" key={index}>
-            <img src={project.image} alt={project.title} />
-            <h3>{project.title}</h3>
-            <p>{project.description}</p>
-            <a href={project.link} target="_blank" rel="noopener noreferrer">
-              View Project
-            </a>
-          </div>
-        ))}
+    <div className="projects-container">
+      {/* Project 1 */}
+      <div className="project-card">
+        <img src="path/to/image1.jpg" alt="Project 1" />
+        <h3>Project 1</h3>
+        <p>Short description of project 1. Lorem ipsum dolor sit amet.</p>
+        <a href="https://github.com" className="project-btn">View Project</a>
       </div>
-    </section>
+
+      {/* Project 2 */}
+      <div className="project-card">
+        <img src="path/to/image2.jpg" alt="Project 2" />
+        <h3>Project 2</h3>
+        <p>Short description of project 2. Lorem ipsum dolor sit amet.</p>
+        <a href="https://github.com" className="project-btn">View Project</a>
+      </div>
+
+      {/* Project 3 */}
+      <div className="project-card">
+        <img src="path/to/image3.jpg" alt="Project 3" />
+        <h3>Project 3</h3>
+        <p>Short description of project 3. Lorem ipsum dolor sit amet.</p>
+        <a href="https://github.com" className="project-btn">View Project</a>
+      </div>
+
+      {/* Optional additional projects */}
+      {/* You can add more projects and they will follow the same pastel color scheme */}
+      <div className="project-card">
+        <img src="path/to/image4.jpg" alt="Project 4" />
+        <h3>Project 4</h3>
+        <p>Short description of project 4. Lorem ipsum dolor sit amet.</p>
+        <a href="https://github.com" className="project-btn">View Project</a>
+      </div>
+    </div>
   );
 };
 

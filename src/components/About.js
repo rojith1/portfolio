@@ -1,33 +1,38 @@
 import React from "react";
+import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact } from "react-icons/fa";
+import { SiNextdotjs, SiChakraui } from "react-icons/si";
 import "./../styles/About.css";
-import profileImage from "./../assets/profile.jpg";
 
 const About = () => {
   return (
-    <section id="about" className="about-section">
-      <div className="about-container">
-        <div className="profile-picture">
-          <img src={profileImage} alt="Profile" />
-        </div>
-        <div className="about-content">
-          <h2>About Me</h2>
-          <p>
-            Hi, I’m [Your Name], a passionate Frontend Developer with a love
-            for creating elegant, user-friendly interfaces. I specialize in
-            building modern, responsive, and accessible websites.
-          </p>
-          <h3>Skills</h3>
-          <ul className="skills-list">
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>React</li>
-            <li>Next.js</li>
-            <li>Chakra UI</li>
-          </ul>
-        </div>
+    <div className="about">
+      <div className="about-header">
+        <h1>About Me</h1>
+        <div className="divider"></div>
       </div>
-    </section>
+
+      <p className="about-description">
+        I'm a <span className="highlight">front-end developer</span> with a passion for creating responsive, user-friendly, and modern web applications. I enjoy working with the latest technologies like React and Next.js, ensuring seamless user experiences.
+      </p>
+
+      <div className="skills">
+        <h2>My Skills</h2>
+        <ul className="skills-list">
+          <li><FaHtml5 className="icon html-icon" title="HTML" /></li>
+          <li><FaCss3Alt className="icon css-icon" title="CSS" /></li>
+          <li><FaJsSquare className="icon js-icon" title="JavaScript" /></li>
+          <li><FaReact className="icon react-icon" title="React" /></li>
+          <li><SiNextdotjs className="icon nextjs-icon" title="Next.js" /></li>
+          <li><SiChakraui className="icon chakraui-icon" title="Chakra UI" /></li>
+        </ul>
+      </div>
+
+      <div className="resume">
+        <a href="/resume.pdf" download className="download-btn">
+          Download My Resume
+        </a>
+      </div>
+    </div>
   );
 };
 

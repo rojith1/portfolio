@@ -1,0 +1,141 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.cta-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 20px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.1);
+}
+
+/* Home Page Layout */
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Hero Section */
+.hero {
+  background-color: #007bff;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 0 2rem;
+}
+
+.hero-content {
+  z-index: 10;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+  font-weight: 300;
+}
+
+/* About Section */
+.about {
+  background-color: #f9f9f9;
+  padding: 80px 20px;
+  width: 100%;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.about:hover {
+  background-color: #e0e0e0;
+}
+
+.about h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.about p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  max-width: 800px;
+  margin: 0 auto;
+  font-weight: 300;
+}
+
+/* Projects Section */
+.projects {
+  background-color: #e0e0e0;
+  padding: 80px 20px;
+  width: 100%;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.projects:hover {
+  background-color: #c0c0c0;
+}
+
+.projects h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.projects p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  max-width: 800px;
+  margin: 0 auto;
+  font-weight: 300;
+}
+
+/* Container for text content */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+
+  .about h2,
+  .projects h2 {
+    font-size: 2rem;
+  }
+
+  .cta-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+}

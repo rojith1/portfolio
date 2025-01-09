@@ -1,42 +1,147 @@
-.contact-section {
-    padding: 50px;
-    text-align: center;
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
   
+  /* Contact Container */
+  .contact-container {
+    max-width: 600px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .contact-container h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .contact-container p {
+    color: #555;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+  
+  /* Form Styles */
   .contact-form {
-    max-width: 400px;
-    margin: auto;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 1rem;
   }
   
-  .contact-form input,
-  .contact-form textarea {
-    padding: 10px;
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  input, textarea {
+    padding: 0.8rem;
+    border-radius: 8px;
     border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: #222;
-    color: #fff;
+    font-size: 1rem;
+    color: #333;
+    outline: none;
+    transition: all 0.3s ease-in-out;
   }
   
-  .contact-form button {
-    background-color: #ffcc00;
-    color: #000;
+  input:focus, textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.2);
+  }
+  
+  textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  
+  /* Submit Button */
+  button.submit-btn {
+    background-color: #007bff;
+    color: white;
     border: none;
-    padding: 10px;
+    padding: 1rem;
+    font-size: 1.1rem;
+    border-radius: 8px;
     cursor: pointer;
-    border-radius: 4px;
-    font-weight: bold;
+    transition: background-color 0.3s ease-in-out;
   }
   
-  .contact-links {
-    margin-top: 20px;
-    color: #fff;
+  button.submit-btn:hover {
+    background-color: #0056b3;
   }
   
-  .contact-links a {
-    color: #ffcc00;
+  /* LinkedIn Button */
+  .linkedin-container {
+    margin-top: 1.5rem;
+  }
+  
+  .linkedin-btn {
+    display: inline-block;
+    background-color: #0077b5;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 8px;
     text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .linkedin-btn:hover {
+    background-color: #005582;
+  }
+  
+  /* Status Message */
+  .form-status {
+    margin-top: 1rem;
+    color: #28a745;
+    font-size: 1rem;
+  }
+  
+  /* Error Status (if any) */
+  .form-status-error {
+    color: #dc3545;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .contact-container {
+      padding: 1.5rem;
+    }
+  
+    .contact-container h2 {
+      font-size: 1.8rem;
+    }
+  
+    .contact-container p {
+      font-size: 1rem;
+    }
+  
+    .form-group input, .form-group textarea {
+      font-size: 1rem;
+    }
+  
+    button.submit-btn {
+      font-size: 1.1rem;
+    }
   }
   

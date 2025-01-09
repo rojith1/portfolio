@@ -1,36 +1,80 @@
-import React from "react";
-import "./../styles/Contact.css";
+import React, { useState } from "react";
+import './../styles/Contact.css';
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [formStatus, setFormStatus] = useState(""); // Success message or error message
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // Simulate form submission logic (e.g., an API call).
+    // Set success message here (you can replace with API logic later)
+    setFormStatus("Message sent successfully! I'll get back to you soon.");
+    setFormData({ name: "", email: "", message: "" }); // Clear form after submit
+  };
+
   return (
-    <section id="contact" className="contact-section">
+    <div className="contact-container">
       <h2>Contact Me</h2>
-      <form className="contact-form">
-        <label htmlFor="name">Name:</label>
-        <input type="text" id="name" placeholder="Your Name" required />
-
-        <label htmlFor="email">Email:</label>
-        <input type="email" id="email" placeholder="Your Email" required />
-
-        <label htmlFor="message">Message:</label>
-        <textarea id="message" placeholder="Your Message" required></textarea>
-
-        <button type="submit">Send</button>
+      <p>Feel free to reach out, or you can connect via LinkedIn!</p>
+      
+      {/* Contact Form */}
+      <form onSubmit={handleSubmit} className="contact-form">
+        <div className="form-group">
+          <input
+            type="text"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            required
+            placeholder="Your Name"
+          />
+        </div>
+        <div className="form-group">
+          <input
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+            placeholder="Your Email"
+          />
+        </div>
+        <div className="form-group">
+          <textarea
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+            required
+            placeholder="Your Message"
+          />
+        </div>
+        <button type="submit" className="submit-btn">Send Message</button>
       </form>
-      <div className="contact-links">
-        <p>Email: yourname@example.com</p>
-        <p>
-          LinkedIn:{" "}
-          <a
-            href="https://www.linkedin.com/in/username"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            View Profile
-          </a>
-        </p>
+
+      {/* LinkedIn Button */}
+      <div className="linkedin-container">
+        <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" className="linkedin-btn">
+          Connect on LinkedIn
+        </a>
       </div>
-    </section>
+
+      {/* Form Status */}
+      {formStatus && <p className="form-status">{formStatus}</p>}
+    </div>
   );
 };
 
